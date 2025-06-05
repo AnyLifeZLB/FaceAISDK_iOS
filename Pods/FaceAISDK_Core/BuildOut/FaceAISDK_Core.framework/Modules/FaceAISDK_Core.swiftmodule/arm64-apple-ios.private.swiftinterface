@@ -1,0 +1,142 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
+// swift-module-flags: -target arm64-apple-ios16.6 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name FaceAISDK_Core
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AVFoundation
+import Combine
+import CoreVideo
+import Foundation
+import MLImage
+import MLKitCommon
+import MLKitFaceDetection
+import MLKitVision
+import Swift
+import SwiftUI
+import TensorFlowLite
+import UIKit
+import Vision
+import VisionKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public struct VerifyResultCode {
+}
+@objc @_inheritsConvenienceInitializers public class AddFaceModel : ObjectiveC.NSObject, Foundation.ObservableObject, AVFoundation.AVCaptureVideoDataOutputSampleBufferDelegate {
+  @Combine.Published @_projectedValueProperty($canAddFace) public var canAddFace: UIKit.UIImage {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $canAddFace: Combine.Published<UIKit.UIImage>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($addFaceTips) public var addFaceTips: Swift.String {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $addFaceTips: Combine.Published<Swift.String>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($addFaceTipsExtra) public var addFaceTipsExtra: Swift.String {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $addFaceTipsExtra: Combine.Published<Swift.String>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($readyConfirmFace) public var readyConfirmFace: Swift.Bool {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $readyConfirmFace: Combine.Published<Swift.Bool>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  final public let captureSession: AVFoundation.AVCaptureSession
+  public func stopAddFace()
+  public func initAddFace()
+  @objc public func captureOutput(_ output: AVFoundation.AVCaptureOutput, didOutput sampleBuffer: CoreMedia.CMSampleBuffer, from connection: AVFoundation.AVCaptureConnection)
+  public func reInit()
+  @objc override dynamic public init()
+  public func confirmSaveFaceiMacVk(fileName: Swift.String) -> Swift.String?
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class VerifyFaceModel : ObjectiveC.NSObject, Foundation.ObservableObject, AVFoundation.AVCaptureVideoDataOutputSampleBufferDelegate {
+  public static let defaultTips: Swift.String
+  @Combine.Published @_projectedValueProperty($verifyFaceTips) public var verifyFaceTips: Swift.String {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $verifyFaceTips: Combine.Published<Swift.String>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($verifyFaceTipsExtra) public var verifyFaceTipsExtra: Swift.String {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $verifyFaceTipsExtra: Combine.Published<Swift.String>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($faceVerifyResult) public var faceVerifyResult: FaceAISDK_Core.FaceVerifyResult {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $faceVerifyResult: Combine.Published<FaceAISDK_Core.FaceVerifyResult>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  final public let captureSession: AVFoundation.AVCaptureSession
+  public func stopFaceVerify()
+  public func initFaceAISDK(faceIDParam: Swift.String, threshold: Swift.Float)
+  @objc public func captureOutput(_ output: AVFoundation.AVCaptureOutput, didOutput sampleBuffer: CoreMedia.CMSampleBuffer, from connection: AVFoundation.AVCaptureConnection)
+  @objc override dynamic public init()
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+public struct FaceVerifyResult : Swift.Equatable {
+  public var code: Swift.Int
+  public var tips: Swift.String
+  public var similarity: Swift.Float
+  public static func == (a: FaceAISDK_Core.FaceVerifyResult, b: FaceAISDK_Core.FaceVerifyResult) -> Swift.Bool
+}
+public struct FaceCameraPreview : SwiftUI.UIViewControllerRepresentable {
+  public init(session: AVFoundation.AVCaptureSession, cameraSize: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) public func makeUIViewController(context: FaceAISDK_Core.FaceCameraPreview.Context) -> UIKit.UIViewController
+  @_Concurrency.MainActor(unsafe) public func updateUIViewController(_ uiViewController: UIKit.UIViewController, context: FaceAISDK_Core.FaceCameraPreview.Context)
+  public typealias Body = Swift.Never
+  public typealias Coordinator = Swift.Void
+  public typealias UIViewControllerType = UIKit.UIViewController
+}
