@@ -49,7 +49,7 @@ public struct AddFaceView: View {
                     viewModel:viewModel,
                     onConfirm: {
                         //保存人脸图和命名
-                        let facePath=viewModel.confirmSaveFaceiMacVk(fileName: faceID)
+                        let facePath=viewModel.confirmSaveFaceAir(fileName: faceID)
                         onDismiss(facePath)
                     }
                 )

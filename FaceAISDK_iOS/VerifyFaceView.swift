@@ -53,7 +53,7 @@ struct VerifyFaceView: View {
         
         .onChange(of: viewModel.faceVerifyResult.code) { newValue in
             showToast = true
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 showToast = false
                 onDismiss(viewModel.faceVerifyResult)  // 传值给父视图
                 dismiss() // 关闭页面
