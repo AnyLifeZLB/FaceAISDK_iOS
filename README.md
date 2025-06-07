@@ -6,7 +6,8 @@ FaceAISDK是iOS 设备端可离线不需联网的人脸识别、动作活体检�
 ## 集成步骤
 SDK 默认的开发环境为Xcode 16+,语言为OC，C，Swift 6.1（重构完后会降级）；UI为SwiftUI实现
 
-- 1. Podfile 添加   pod 'FaceAISDK', '0.0.yourNeedVersion' （请指定版本号，20250601刚重构完会快速迭代）
+- 1. Podfile 添加  pod 'FaceAISDK', ' version'
+（请指定版本号，确保科学上网能同步GitHub）
   首次依赖安装Installing TensorFlowLiteSwift 会耗费10分钟左右时间（实际取决于你的网络状态）
   更新到新版本SDK pod install --repo-update
   
@@ -20,8 +21,18 @@ SDK 默认的开发环境为Xcode 16+,语言为OC，C，Swift 6.1（重构完后
 ## 其他说明 
   本SDK 需要摄像头实时获取预览数据，目前只支持真机调试。
   
-     
-  
-  
-6月5号 上线，合规检测完
+  微信：HaoNan19990322 
+  Email: FaceAISDK.Service@gmail.com 
 
+## 其他平台？
+
+  uniApp: https://github.com/AnyLifeZLB/UniPlugin-FaceAISDK
+  Android：https://github.com/AnyLifeZLB/FaceVerificationSDK 
+  
+  Android体验Demo APK下载如下
+
+<div align=center>
+<img src="https://user-images.githubusercontent.com/15169396/210045090-60c073df-ddbd-4747-8e24-f0dce1eccb58.png" width = 22% height = 22% />
+</div>
+
+![FaceAISDKDemo](https://github.com/user-attachments/assets/bddef598-999d-451e-ac29-1a0fbc2533bd)

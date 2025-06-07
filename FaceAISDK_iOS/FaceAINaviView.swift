@@ -23,10 +23,8 @@ struct FaceAINaviView: View {
                 }.padding(.top,66)
                 
                 Text("保存路径：\(addFaceResult ?? " 暂无")")
-                    .font(.system(size: 10).bold())
-                    .padding(22)
-    
-                
+                                    .font(.system(size: 10).bold())
+                                    .padding(.horizontal,18)
                 
                 Button("查看我的人脸底片") {
                     navigationPath.append(FaceAINaviDestination.ImageDetailView(faceID))
