@@ -13,7 +13,7 @@ SDK 默认的开发环境为Xcode 16+,语言为OC，C，Swift 6.1（重构完后
 
 #### 1.Podfile 添加  pod 'FaceAISDK', ' version'
      
-  首次依赖安装Installing TensorFlowLiteSwift 会耗费10分钟左右时间（实际取决于你的网络状态）
+  首次依赖安装Installing TensorFlowLiteSwift 会耗费10分钟左右时间（实际取决于你的网络状态）  
   更新到新版本SDK pod install --repo-update（请指定版本号，确保科学上网能同步GitHub）
 
 #### 2. 拷贝FaceAINaviView,AddFaceView,VerifyFaceView 到你的工程  
