@@ -8,7 +8,7 @@ target 'FaceAISDK_iOS' do
   # 1.  pod install --repo-update 安装依赖
   # 2.  ToastUI 使用SPM 管理 File->Add Package Dependence https://github.com/quanshousio/ToastUI.git
 
-  pod 'FaceAISDK_Core', '0.0.70'
+  pod 'FaceAISDK_Core', '0.0.91.airXC'
      
 
 
