@@ -34,6 +34,12 @@ SDK 默认的开发环境为Xcode 16+,语言为OC，C，Swift 6.1（重构完后
 
 <div align=center>
 <img src="https://user-images.githubusercontent.com/15169396/210045090-60c073df-ddbd-4747-8e24-f0dce1eccb58.png" width = 22% height = 22% />
-</div>
+</div>  
 
-![FaceAISDKDemo](https://github.com/user-attachments/assets/bddef598-999d-451e-ac29-1a0fbc2533bd)
+.  
+
+<div align=center>
+<img src="https://github.com/user-attachments/assets/bddef598-999d-451e-ac29-1a0fbc2533bd" width = 80% height = 80% />
+</div>  
+
+
