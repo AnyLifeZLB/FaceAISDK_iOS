@@ -1,0 +1,20 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "AppName" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "FaceAISDK"
+          }
+        }
+      }
+    },
+    "FaceAlign" : {
+      "extractionState" : "manual"
+    }
+  },
+  "version" : "1.0"
+}

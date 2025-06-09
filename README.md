@@ -1,10 +1,22 @@
-## FaceAISDK 介绍
-iOS FaceAISDK is on_device Offline Face Detection 、Recognition 、Liveness Detection Anti Spoofing SDK
-FaceAISDK是iOS 设备端可离线不需联网的人脸识别、动作活体检测、人脸录入SDK，快速集成后实现相关功能。
+<img src="https://badgen.net/badge/FaceAI%20SDK/%20%E5%BF%AB%E9%80%9F%E5%AE%9E%E7%8E%B0%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB%E5%8A%9F%E8%83%BD" />
+<br>
 
+
+<div align=center>
+<img src="https://github.com/user-attachments/assets/b1e0a9c4-8b43-4eb8-bf7a-7632901cfb2c" width = 20% height = 20% />
+</div>
+
+
+## FaceAISDK 介绍
+iOS FaceAISDK is on_device Offline Face Detection 、Recognition 、Liveness Detection Anti Spoofing SDK.  
+FaceAISDK是iOS 设备端可离线不需联网的人脸识别、动作活体检测、人脸录入SDK，集成后可快速实现相关功能。  
+
+
+.  
 <div align=center>
 <img src="https://github.com/user-attachments/assets/bddef598-999d-451e-ac29-1a0fbc2533bd" width = 70% height = 70% />
 </div>  
+.  
 
 
 
@@ -14,7 +26,8 @@ SDK 默认的开发环境为Xcode 16+,语言为OC，C，Swift 6.1（重构完后
 #### 1.Podfile 添加  pod 'FaceAISDK', ' version'
      
   首次依赖安装Installing TensorFlowLiteSwift 会耗费10分钟左右时间（实际取决于你的网络状态）  
-  更新到新版本SDK pod install --repo-update（请指定版本号，确保科学上网能同步GitHub）
+  更新到新版本SDK pod install --repo-update（请指定版本号，确保科学上网能同步GitHub）  
+  ToastUI 使用SPM 管理 File->Add Package Dependence https://github.com/quanshousio/ToastUI.git
 
 #### 2. 拷贝FaceAINaviView,AddFaceView,VerifyFaceView 到你的工程  
   记得声明相机使用权限；应用内跳转到 FaceAINaviView功能演示导航页面你就可以开始体验效果  
