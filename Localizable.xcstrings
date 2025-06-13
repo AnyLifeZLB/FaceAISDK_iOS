@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    " %@" : {
+
+    },
     "AppName" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -12,8 +15,41 @@
         }
       }
     },
+    "FaceAISDK Navi.🧭" : {
+
+    },
     "FaceAlign" : {
       "extractionState" : "manual"
+    },
+    "人脸录入确认" : {
+
+    },
+    "人脸识别，活体检测" : {
+
+    },
+    "保存路径：%@" : {
+
+    },
+    "关于我们" : {
+
+    },
+    "去添加人脸照片" : {
+
+    },
+    "查看我的人脸底片" : {
+
+    },
+    "知道了" : {
+
+    },
+    "确认" : {
+
+    },
+    "请录入清晰无遮挡正脸图" : {
+
+    },
+    "重试" : {
+
     }
   },
   "version" : "1.0"
