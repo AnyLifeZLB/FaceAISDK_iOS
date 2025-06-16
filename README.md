@@ -47,13 +47,12 @@ SDK默认的开发环境为Xcode 16.3 ,实现语言为Swift 6.1，OC&C；UI全�
   Email: FaceAISDK.Service@gmail.com   
 
 ## 其他平台？
-  uniApp 接入正重构为UTS 插件，0620. 
-  uniApp: https://github.com/AnyLifeZLB/UniPlugin-FaceAISDK  
-  Android：https://github.com/AnyLifeZLB/FaceVerificationSDK   
+  uniApp 接入正重构为UTS 插件，0620.   
+  uniApp: https://github.com/AnyLifeZLB/uniPlugin_FaceAI_UTS    
+  Android：https://github.com/AnyLifeZLB/FaceVerificationSDK     
   
   Android体验Demo APK下载如下  
-    
-
+  
 <div align=center>
 <img src="https://user-images.githubusercontent.com/15169396/210045090-60c073df-ddbd-4747-8e24-f0dce1eccb58.png" width = 22% height = 22% />
 </div>  
