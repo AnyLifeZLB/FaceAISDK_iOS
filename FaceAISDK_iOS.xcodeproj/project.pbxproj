@@ -15,7 +15,6 @@
 		7C73FE632DEFEA6F005437F4 /* FaceAINaviView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C73FE5D2DEFEA6F005437F4 /* FaceAINaviView.swift */; };
 		7C73FE642DEFEA6F005437F4 /* AddFaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C73FE5E2DEFEA6F005437F4 /* AddFaceView.swift */; };
 		7C73FE652DEFEA6F005437F4 /* ImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C73FE5F2DEFEA6F005437F4 /* ImageDetailView.swift */; };
-		7CE8BB9F2DF175D000A48545 /* ToastUI in Frameworks */ = {isa = PBXBuildFile; productRef = 7CE8BB9E2DF175D000A48545 /* ToastUI */; };
 		CFE241522DF53512004D91FA /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = CFE241512DF53512004D91FA /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
@@ -39,7 +38,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CE8BB9F2DF175D000A48545 /* ToastUI in Frameworks */,
 				4D708862B1B0AFB51DECBC96 /* Pods_FaceAISDK_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -124,9 +122,6 @@
 			dependencies = (
 			);
 			name = FaceAISDK_iOS;
-			packageProductDependencies = (
-				7CE8BB9E2DF175D000A48545 /* ToastUI */,
-			);
 			productName = FaceAISDK_iOS;
 			productReference = 7C73FE462DEFE193005437F4 /* FaceAISDK_iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -156,9 +151,6 @@
 				"zh-Hans",
 			);
 			mainGroup = 7C73FE3D2DEFE193005437F4;
-			packageReferences = (
-				7CE8BB9D2DF175D000A48545 /* XCRemoteSwiftPackageReference "ToastUI" */,
-			);
 			productRefGroup = 7C73FE472DEFE193005437F4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -465,25 +457,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		7CE8BB9D2DF175D000A48545 /* XCRemoteSwiftPackageReference "ToastUI" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/quanshousio/ToastUI.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		7CE8BB9E2DF175D000A48545 /* ToastUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7CE8BB9D2DF175D000A48545 /* XCRemoteSwiftPackageReference "ToastUI" */;
-			productName = ToastUI;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7C73FE3E2DEFE193005437F4 /* Project object */;
 }
