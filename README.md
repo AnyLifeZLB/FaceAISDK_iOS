@@ -28,7 +28,10 @@ SDK默认的开发环境为Xcode 16.3 ,实现语言为Swift 6.1，OC&C；UI全�
   最新版本一般会在本工程Podfile 中指定，请复制指定版本到你的项目
   首次依赖 安装SDK及内部依赖 会耗费10分钟左右时间（实际取决于你的网络状态）  
   安装SDK依赖 pod install --repo-update（请指定和本Demo相同最新版本，确保科学上网能同步GitHub）  
-  ToastUI 使用SPM 管理 File->Add Package Dependence https://github.com/quanshousio/ToastUI.git
+    
+  pod 'FaceAISDK_Core', '0.1.0.airXC'
+  pod 'ToastUI'
+
 
 #### 2. 拷贝FaceAINaviView,AddFaceView,VerifyFaceView 到你的工程  
   记得声明相机使用权限；应用内跳转到 FaceAINaviView功能演示导航页面你就可以开始体验效果  
@@ -44,7 +47,7 @@ SDK默认的开发环境为Xcode 16.3 ,实现语言为Swift 6.1，OC&C；UI全�
   Email: FaceAISDK.Service@gmail.com   
 
 ## 其他平台？
-
+  uniApp 接入正重构为UTS 插件，0620. 
   uniApp: https://github.com/AnyLifeZLB/UniPlugin-FaceAISDK  
   Android：https://github.com/AnyLifeZLB/FaceVerificationSDK   
   

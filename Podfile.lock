@@ -57,9 +57,11 @@ PODS:
     - TensorFlowLiteC (= 2.17.0)
     - TensorFlowLiteSwift/Privacy (= 2.17.0)
   - TensorFlowLiteSwift/Privacy (2.17.0)
+  - ToastUI (2.0.0)
 
 DEPENDENCIES:
   - FaceAISDK_Core (= 0.1.0.airXC)
+  - ToastUI
 
 SPEC REPOS:
   trunk:
@@ -77,6 +79,7 @@ SPEC REPOS:
     - PromisesObjC
     - TensorFlowLiteC
     - TensorFlowLiteSwift
+    - ToastUI
 
 SPEC CHECKSUMS:
   FaceAISDK_Core: 8e4d74103826d4616865b8e7d53839f4949686ca
@@ -93,7 +96,8 @@ SPEC CHECKSUMS:
   PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
   TensorFlowLiteC: eac6d689a8d391d1b202dc59e3d9165ba64aaf73
   TensorFlowLiteSwift: 723fe42222815e72490c79feeff05305530de393
+  ToastUI: 391eb9a1cc15e7ef4b79ee112e4a0b969259154f
 
-PODFILE CHECKSUM: 5d9afddd5b7102b4bc97c6864ca3ec3ba55f1d1b
+PODFILE CHECKSUM: f86ba7bbfc326295301eb29f7270979d4766acca
 
 COCOAPODS: 1.16.2
