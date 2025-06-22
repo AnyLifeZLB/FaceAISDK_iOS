@@ -24,7 +24,7 @@ FaceAISDK是iOS 设备端可离线不需联网的人脸识别、动作活体检�
 
 SDK默认的开发环境为Xcode 16.3 ,实现语言为Swift 6.1，OC&C；UI全部使用SwiftUI实现
 
-#### 1.Podfile 添加  pod 'FaceAISDK', 'Newest Version'
+#### 1.Podfile 添加依赖
   最新版本一般会在本工程Podfile 中指定，请复制指定版本到你的项目
   首次依赖 安装SDK及内部依赖 会耗费10分钟左右时间（实际取决于你的网络状态）  
   安装SDK依赖 pod install --repo-update（请指定和本Demo相同最新版本，确保科学上网能同步GitHub）  
@@ -47,7 +47,7 @@ SDK默认的开发环境为Xcode 16.3 ,实现语言为Swift 6.1，OC&C；UI全�
   Email: FaceAISDK.Service@gmail.com   
 
 ## 其他平台？
-  uniApp 接入正重构为UTS 插件，0620.   
+  uniApp 接入正重构为UTS 插件，0630 等待UNI官方协调上线处理.   
   uniApp: https://github.com/AnyLifeZLB/uniPlugin_FaceAI_UTS    
   Android：https://github.com/AnyLifeZLB/FaceVerificationSDK     
   
