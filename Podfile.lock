@@ -1,5 +1,5 @@
 PODS:
-  - FaceAISDK_Core (0.1.0.airXC):
+  - FaceAISDK_Core (0.2.1):
     - GoogleMLKit/FaceDetection
     - TensorFlowLiteSwift
   - GoogleDataTransport (10.1.0):
@@ -60,7 +60,7 @@ PODS:
   - ToastUI (2.0.0)
 
 DEPENDENCIES:
-  - FaceAISDK_Core (= 0.1.0.airXC)
+  - FaceAISDK_Core (= 0.2.1)
   - ToastUI
 
 SPEC REPOS:
@@ -82,7 +82,7 @@ SPEC REPOS:
     - ToastUI
 
 SPEC CHECKSUMS:
-  FaceAISDK_Core: 8e4d74103826d4616865b8e7d53839f4949686ca
+  FaceAISDK_Core: 9de53f34c1253012c12f5e3c4de0c0d903614287
   GoogleDataTransport: aae35b7ea0c09004c3797d53c8c41f66f219d6a7
   GoogleMLKit: ddd51d7dff36ff28defa69afedd9cdce684fd857
   GoogleToolboxForMac: d1a2cbf009c453f4d6ded37c105e2f67a32206d8
@@ -98,6 +98,6 @@ SPEC CHECKSUMS:
   TensorFlowLiteSwift: 723fe42222815e72490c79feeff05305530de393
   ToastUI: 391eb9a1cc15e7ef4b79ee112e4a0b969259154f
 
-PODFILE CHECKSUM: f86ba7bbfc326295301eb29f7270979d4766acca
+PODFILE CHECKSUM: 6bd3a9602f8c886d777efde3d3f49e2018e186ed
 
 COCOAPODS: 1.16.2
