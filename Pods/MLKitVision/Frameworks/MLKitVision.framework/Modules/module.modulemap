@@ -1,0 +1,22 @@
+framework module MLKitVision {
+  umbrella header "MLKitVision.h"
+  
+
+  export *
+  module * { export * }
+  link "c++"
+  link "z"
+  link framework "AVFoundation"
+  link framework "Accelerate"
+  link framework "CoreFoundation"
+  link framework "CoreGraphics"
+  link framework "CoreMedia"
+  link framework "CoreTelephony"
+  link framework "CoreVideo"
+  link framework "Foundation"
+  link framework "OSLog"
+  link framework "QuartzCore"
+  link framework "Security"
+  link framework "SystemConfiguration"
+  link framework "UIKit"
+}

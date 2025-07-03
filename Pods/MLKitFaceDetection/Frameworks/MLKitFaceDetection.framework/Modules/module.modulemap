@@ -1,0 +1,26 @@
+framework module MLKitFaceDetection {
+  umbrella header "MLKitFaceDetection.h"
+  
+
+  export *
+  module * { export * }
+  link "c++"
+  link "dl"
+  link "m"
+  link "pthread"
+  link "z"
+  link framework "AVFoundation"
+  link framework "Accelerate"
+  link framework "CoreFoundation"
+  link framework "CoreGraphics"
+  link framework "CoreImage"
+  link framework "CoreMedia"
+  link framework "CoreTelephony"
+  link framework "CoreVideo"
+  link framework "Foundation"
+  link framework "OSLog"
+  link framework "QuartzCore"
+  link framework "Security"
+  link framework "SystemConfiguration"
+  link framework "UIKit"
+}

@@ -1,0 +1,4 @@
+framework module FaceAISDK_Core {
+  header "FaceAISDK_Core-Swift.h"
+  requires objc
+}
