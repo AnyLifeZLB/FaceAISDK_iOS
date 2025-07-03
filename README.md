@@ -43,7 +43,7 @@ SDK默认的开发环境为Xcode 16.3 ,实现语言为Swift 6.1，OC&C；UI全�
 ## 其他说明 
   本SDK 需要摄像头实时获取预览数据，目前只支持真机调试。
   
-  微信：HaoNan19990322  
+  微信：FaceAISDK  
   Email: FaceAISDK.Service@gmail.com   
 
 ## 其他平台？

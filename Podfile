@@ -6,7 +6,7 @@ target 'FaceAISDK_iOS' do
   use_frameworks!
 
   # 1.  pod update FaceAISDK_Core 安装依赖,请指定版本。
-  pod 'FaceAISDK_Core', '0.2.1'
+  pod 'FaceAISDK_Core', '2025.07.01'
   pod 'ToastUI'
 
 
