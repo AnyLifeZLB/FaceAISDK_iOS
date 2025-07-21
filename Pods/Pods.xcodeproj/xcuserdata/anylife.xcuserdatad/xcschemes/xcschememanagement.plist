@@ -165,13 +165,6 @@
 			<key>orderHint</key>
 			<integer>23</integer>
 		</dict>
-		<key>ToastUI.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>25</integer>
-		</dict>
 		<key>nanopb-nanopb_Privacy.xcscheme</key>
 		<dict>
 			<key>isShown</key>

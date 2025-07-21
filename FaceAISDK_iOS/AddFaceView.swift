@@ -2,9 +2,7 @@ import SwiftUI
 import AVFoundation
 import FaceAISDK_Core
 
-
 let cameraSize: CGFloat = 300 //  相机的尺寸
-
 
 /**
  *  人脸录入，摄像头采集画面需要真机调试
@@ -31,7 +29,7 @@ public struct AddFaceView: View {
                 .frame(minHeight: 30)
                 .foregroundColor(.black)
             
-            FaceCameraPreview(session: viewModel.captureSession,cameraSize: cameraSize)
+            FaceAICameraView(session: viewModel.captureSession,cameraSize: cameraSize)
                 .frame(
                     width: min(UIScreen.main.bounds.width,cameraSize),
                     height: min(UIScreen.main.bounds.width,cameraSize))
@@ -50,6 +48,7 @@ public struct AddFaceView: View {
                     onConfirm: {
                         //保存人脸图和命名
                         let facePath=viewModel.confirmSaveFaceAir(fileName: faceID)
+
                         onDismiss(facePath)
                     }
                 )
@@ -115,9 +114,7 @@ public struct AddFaceView: View {
             .shadow(radius: 9)
         }
     }
-    
 }
-
 
 
 /**

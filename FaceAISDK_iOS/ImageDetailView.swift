@@ -1,13 +1,11 @@
 import SwiftUI
 
-
 //
 //  ImageDetailView.swift
 //  SDKDev
 //
 //  Created by anylife on 5/30/25.
 //
-
 struct ImageDetailView: View {
     
     @Environment(\.dismiss) private var dismiss
@@ -19,7 +17,6 @@ struct ImageDetailView: View {
     var body: some View {
         VStack {
             //加一点人脸合规的提示🔔
-            
             if let uiImage = uiImage {
                 Image(uiImage: uiImage)
                     .resizable()
@@ -46,7 +43,6 @@ struct ImageDetailView: View {
             DispatchQueue.global(qos: .userInitiated).async {
                 if let imageData = try? Data(contentsOf: fileURL),
                    let loadedImage = UIImage(data: imageData) {
-                    
                     DispatchQueue.main.async {
                         self.uiImage = loadedImage
                     }
@@ -55,7 +51,6 @@ struct ImageDetailView: View {
                 }
             }
         }
-        
     }
     
     
