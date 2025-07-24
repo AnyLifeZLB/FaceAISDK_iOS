@@ -53,7 +53,8 @@ struct VerifyFaceView: View {
         
         .onChange(of: viewModel.faceVerifyResult.code) { newValue in
             showToast = true
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            print("ViewModel 返回 ： \(viewModel.faceVerifyResult)")
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                 showToast = false
                 onDismiss(viewModel.faceVerifyResult)  // 传值给父视图
                 dismiss() // 关闭页面
@@ -61,7 +62,7 @@ struct VerifyFaceView: View {
         }
         
         .toast(isPresented: $showToast) {
-            ToastView(" \(viewModel.faceVerifyResult.tips)")
+            ToastView("\(viewModel.faceVerifyResult.tips)").toastViewStyle(.success)
         }
         
         .onDisappear{

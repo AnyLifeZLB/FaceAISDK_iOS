@@ -1,5 +1,5 @@
 PODS:
-  - FaceAISDK_Core (2025.07.202):
+  - FaceAISDK_Core (2025.07.2000):
     - GoogleMLKit/FaceDetection (= 9.0.0)
     - TensorFlowLiteSwift (= 2.17.0)
   - GoogleDataTransport (10.1.0):
@@ -59,11 +59,10 @@ PODS:
   - TensorFlowLiteSwift/Privacy (2.17.0)
 
 DEPENDENCIES:
-  - FaceAISDK_Core (= 2025.07.202)
+  - FaceAISDK_Core (from `FaceAISDK_Core/FaceAISDK_Core.podspec`)
 
 SPEC REPOS:
   trunk:
-    - FaceAISDK_Core
     - GoogleDataTransport
     - GoogleMLKit
     - GoogleToolboxForMac
@@ -78,8 +77,12 @@ SPEC REPOS:
     - TensorFlowLiteC
     - TensorFlowLiteSwift
 
+EXTERNAL SOURCES:
+  FaceAISDK_Core:
+    :path: FaceAISDK_Core/FaceAISDK_Core.podspec
+
 SPEC CHECKSUMS:
-  FaceAISDK_Core: 3693e4347e65e216e0e196a9f84d71aae47fab93
+  FaceAISDK_Core: 27e5d30ab7e6ab0a3f8c821ceb87ce25d1dcfc2b
   GoogleDataTransport: aae35b7ea0c09004c3797d53c8c41f66f219d6a7
   GoogleMLKit: b1eee21a41c57704fe72483b15c85cb2c0cd7444
   GoogleToolboxForMac: d1a2cbf009c453f4d6ded37c105e2f67a32206d8
@@ -94,6 +97,6 @@ SPEC CHECKSUMS:
   TensorFlowLiteC: eac6d689a8d391d1b202dc59e3d9165ba64aaf73
   TensorFlowLiteSwift: 723fe42222815e72490c79feeff05305530de393
 
-PODFILE CHECKSUM: b0630a0b0109c32ad77c29acdde0853dfda9a9c1
+PODFILE CHECKSUM: f12dae8bcb14a544f3f99b184b217c21dfaae08c
 
 COCOAPODS: 1.16.2
