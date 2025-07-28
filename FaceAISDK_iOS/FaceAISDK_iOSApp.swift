@@ -11,8 +11,8 @@ import SwiftUI
 struct FaceAISDK_iOSApp: App {
     
     init(){
-        let mainBundle = Bundle.main.bundlePath
-        print("✈️mainBundle 路径: \(mainBundle)")
+//        let mainBundle = Bundle.main.bundlePath
+//        print("✈️mainBundle 路径: \(mainBundle)")
 
     }
     

@@ -17,23 +17,7 @@
 		CF2E7E812E2E1FA500608756 /* VerifyFaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2E7E802E2E1FA500608756 /* VerifyFaceView.swift */; };
 		CF2E7E822E2E1FA500608756 /* VerifyFaceModelCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2E7E7F2E2E1FA500608756 /* VerifyFaceModelCustom.swift */; };
 		CF44AD232E2CFCC7001177C6 /* ToastUI in Frameworks */ = {isa = PBXBuildFile; productRef = CF44AD222E2CFCC7001177C6 /* ToastUI */; };
-		CF9ABCC32E3356FB006642AF /* FaceAISDK_Core.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF9ABCB72E332CE4006642AF /* FaceAISDK_Core.xcframework */; };
-		CF9ABCC42E3356FB006642AF /* FaceAISDK_Core.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CF9ABCB72E332CE4006642AF /* FaceAISDK_Core.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		CF9ABCC52E3356FB006642AF /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				CF9ABCC42E3356FB006642AF /* FaceAISDK_Core.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		086301CD3C54B4A0CDC0056B /* Pods_FaceAISDK_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceAISDK_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,8 +32,6 @@
 		A5ED0820CE7BE69BC3CF7BE9 /* Pods-FaceAISDK_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceAISDK_iOS.release.xcconfig"; path = "Target Support Files/Pods-FaceAISDK_iOS/Pods-FaceAISDK_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		CF2E7E7F2E2E1FA500608756 /* VerifyFaceModelCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyFaceModelCustom.swift; sourceTree = "<group>"; };
 		CF2E7E802E2E1FA500608756 /* VerifyFaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyFaceView.swift; sourceTree = "<group>"; };
-		CF9ABCB72E332CE4006642AF /* FaceAISDK_Core.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = FaceAISDK_Core.xcframework; sourceTree = "<group>"; };
-		CF9ABCC12E3356E9006642AF /* subModel.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = subModel.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +40,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF44AD232E2CFCC7001177C6 /* ToastUI in Frameworks */,
-				CF9ABCC32E3356FB006642AF /* FaceAISDK_Core.xcframework in Frameworks */,
 				BC94EC1C39378D390145C01F /* Pods_FaceAISDK_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -77,8 +58,6 @@
 		7C73FE3D2DEFE193005437F4 = {
 			isa = PBXGroup;
 			children = (
-				CF9ABCC22E3356E9006642AF /* Resources */,
-				CF9ABCB62E332CD5006642AF /* FaceLib */,
 				7C73FE482DEFE193005437F4 /* FaceAISDK_iOS */,
 				7C73FE472DEFE193005437F4 /* Products */,
 				940CF5AE87F342FFA215C006 /* Pods */,
@@ -126,22 +105,6 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		CF9ABCB62E332CD5006642AF /* FaceLib */ = {
-			isa = PBXGroup;
-			children = (
-				CF9ABCB72E332CE4006642AF /* FaceAISDK_Core.xcframework */,
-			);
-			path = FaceLib;
-			sourceTree = "<group>";
-		};
-		CF9ABCC22E3356E9006642AF /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				CF9ABCC12E3356E9006642AF /* subModel.bundle */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -155,7 +118,6 @@
 				7C73FE442DEFE193005437F4 /* Resources */,
 				1E6C904038F0F124264CC4E1 /* [CP] Embed Pods Frameworks */,
 				FDB441EFAAB5BD698B105468 /* [CP] Copy Pods Resources */,
-				CF9ABCC52E3356FB006642AF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
