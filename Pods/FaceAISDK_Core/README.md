@@ -29,8 +29,6 @@ Navigate to your project settings. Find a new tab called “Package Dependencies
 Click the “+” button to open the add package dialog. 
 Installation ToastUI https://github.com/quanshousio/ToastUI 
 
-![添加ToastUI](https://www.quanshousio.com/ToastUI/images/com.quanshousio.ToastUI/xcode-add-package@1x.png)  
-
 
 #### 1.Podfile 添加依赖
   最新版本一般会在本工程Podfile 中指定，请复制指定版本到你的项目
