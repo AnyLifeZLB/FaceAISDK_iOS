@@ -7,30 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4D708862B1B0AFB51DECBC96 /* Pods_FaceAISDK_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A36172847F7F620FA9A1EB0A /* Pods_FaceAISDK_iOS.framework */; };
 		7C73FE4E2DEFE199005437F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C73FE4D2DEFE199005437F4 /* Assets.xcassets */; };
 		7C73FE512DEFE199005437F4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C73FE502DEFE199005437F4 /* Preview Assets.xcassets */; };
-		7C73FE612DEFEA6F005437F4 /* VerifyFaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C73FE5B2DEFEA6F005437F4 /* VerifyFaceView.swift */; };
 		7C73FE622DEFEA6F005437F4 /* FaceAISDK_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C73FE5C2DEFEA6F005437F4 /* FaceAISDK_iOSApp.swift */; };
 		7C73FE632DEFEA6F005437F4 /* FaceAINaviView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C73FE5D2DEFEA6F005437F4 /* FaceAINaviView.swift */; };
 		7C73FE642DEFEA6F005437F4 /* AddFaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C73FE5E2DEFEA6F005437F4 /* AddFaceView.swift */; };
 		7C73FE652DEFEA6F005437F4 /* ImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C73FE5F2DEFEA6F005437F4 /* ImageDetailView.swift */; };
-		CFE241522DF53512004D91FA /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = CFE241512DF53512004D91FA /* Localizable.xcstrings */; };
+		BC94EC1C39378D390145C01F /* Pods_FaceAISDK_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 086301CD3C54B4A0CDC0056B /* Pods_FaceAISDK_iOS.framework */; };
+		CF2E7E812E2E1FA500608756 /* VerifyFaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2E7E802E2E1FA500608756 /* VerifyFaceView.swift */; };
+		CF2E7E822E2E1FA500608756 /* VerifyFaceModelCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2E7E7F2E2E1FA500608756 /* VerifyFaceModelCustom.swift */; };
+		CF44AD232E2CFCC7001177C6 /* ToastUI in Frameworks */ = {isa = PBXBuildFile; productRef = CF44AD222E2CFCC7001177C6 /* ToastUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		086301CD3C54B4A0CDC0056B /* Pods_FaceAISDK_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceAISDK_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C73FE462DEFE193005437F4 /* FaceAISDK_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceAISDK_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C73FE4D2DEFE199005437F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C73FE502DEFE199005437F4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		7C73FE5B2DEFEA6F005437F4 /* VerifyFaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyFaceView.swift; sourceTree = "<group>"; };
 		7C73FE5C2DEFEA6F005437F4 /* FaceAISDK_iOSApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceAISDK_iOSApp.swift; sourceTree = "<group>"; };
 		7C73FE5D2DEFEA6F005437F4 /* FaceAINaviView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceAINaviView.swift; sourceTree = "<group>"; };
 		7C73FE5E2DEFEA6F005437F4 /* AddFaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFaceView.swift; sourceTree = "<group>"; };
 		7C73FE5F2DEFEA6F005437F4 /* ImageDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDetailView.swift; sourceTree = "<group>"; };
-		7DF1A82A5EBABC164C97572F /* Pods-FaceAISDK_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceAISDK_iOS.debug.xcconfig"; path = "Target Support Files/Pods-FaceAISDK_iOS/Pods-FaceAISDK_iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		A36172847F7F620FA9A1EB0A /* Pods_FaceAISDK_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceAISDK_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C259A2CEEE9096A1DEDAF78B /* Pods-FaceAISDK_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceAISDK_iOS.release.xcconfig"; path = "Target Support Files/Pods-FaceAISDK_iOS/Pods-FaceAISDK_iOS.release.xcconfig"; sourceTree = "<group>"; };
-		CFE241512DF53512004D91FA /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		9B07C83023D0CC8A9EC7E5E3 /* Pods-FaceAISDK_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceAISDK_iOS.debug.xcconfig"; path = "Target Support Files/Pods-FaceAISDK_iOS/Pods-FaceAISDK_iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		A5ED0820CE7BE69BC3CF7BE9 /* Pods-FaceAISDK_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceAISDK_iOS.release.xcconfig"; path = "Target Support Files/Pods-FaceAISDK_iOS/Pods-FaceAISDK_iOS.release.xcconfig"; sourceTree = "<group>"; };
+		CF2E7E7F2E2E1FA500608756 /* VerifyFaceModelCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyFaceModelCustom.swift; sourceTree = "<group>"; };
+		CF2E7E802E2E1FA500608756 /* VerifyFaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyFaceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,21 +39,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D708862B1B0AFB51DECBC96 /* Pods_FaceAISDK_iOS.framework in Frameworks */,
+				CF44AD232E2CFCC7001177C6 /* ToastUI in Frameworks */,
+				BC94EC1C39378D390145C01F /* Pods_FaceAISDK_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		749D786BAD70FE650B428163 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				086301CD3C54B4A0CDC0056B /* Pods_FaceAISDK_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7C73FE3D2DEFE193005437F4 = {
 			isa = PBXGroup;
 			children = (
-				CFE241512DF53512004D91FA /* Localizable.xcstrings */,
 				7C73FE482DEFE193005437F4 /* FaceAISDK_iOS */,
 				7C73FE472DEFE193005437F4 /* Products */,
 				940CF5AE87F342FFA215C006 /* Pods */,
-				C0538CD4C7429928376B5708 /* Frameworks */,
+				749D786BAD70FE650B428163 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,7 +80,8 @@
 				7C73FE5D2DEFEA6F005437F4 /* FaceAINaviView.swift */,
 				7C73FE5C2DEFEA6F005437F4 /* FaceAISDK_iOSApp.swift */,
 				7C73FE5F2DEFEA6F005437F4 /* ImageDetailView.swift */,
-				7C73FE5B2DEFEA6F005437F4 /* VerifyFaceView.swift */,
+				CF2E7E7F2E2E1FA500608756 /* VerifyFaceModelCustom.swift */,
+				CF2E7E802E2E1FA500608756 /* VerifyFaceView.swift */,
 				7C73FE4D2DEFE199005437F4 /* Assets.xcassets */,
 				7C73FE4F2DEFE199005437F4 /* Preview Content */,
 			);
@@ -89,18 +99,10 @@
 		940CF5AE87F342FFA215C006 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7DF1A82A5EBABC164C97572F /* Pods-FaceAISDK_iOS.debug.xcconfig */,
-				C259A2CEEE9096A1DEDAF78B /* Pods-FaceAISDK_iOS.release.xcconfig */,
+				9B07C83023D0CC8A9EC7E5E3 /* Pods-FaceAISDK_iOS.debug.xcconfig */,
+				A5ED0820CE7BE69BC3CF7BE9 /* Pods-FaceAISDK_iOS.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		C0538CD4C7429928376B5708 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A36172847F7F620FA9A1EB0A /* Pods_FaceAISDK_iOS.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,12 +112,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7C73FE542DEFE199005437F4 /* Build configuration list for PBXNativeTarget "FaceAISDK_iOS" */;
 			buildPhases = (
-				92D87D66D624FDB1F85EA7F7 /* [CP] Check Pods Manifest.lock */,
+				B47F3F37DE7059954F57D4B6 /* [CP] Check Pods Manifest.lock */,
 				7C73FE422DEFE193005437F4 /* Sources */,
 				7C73FE432DEFE193005437F4 /* Frameworks */,
 				7C73FE442DEFE193005437F4 /* Resources */,
-				DFB4312803164A9B1E554BFC /* [CP] Embed Pods Frameworks */,
-				D46AAB3B59A51A4C14B9CB8F /* [CP] Copy Pods Resources */,
+				1E6C904038F0F124264CC4E1 /* [CP] Embed Pods Frameworks */,
+				FDB441EFAAB5BD698B105468 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -133,7 +135,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1520;
+				LastSwiftUpdateCheck = 1630;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					7C73FE452DEFE193005437F4 = {
@@ -151,6 +153,9 @@
 				"zh-Hans",
 			);
 			mainGroup = 7C73FE3D2DEFE193005437F4;
+			packageReferences = (
+				CF44AD212E2CFCC7001177C6 /* XCRemoteSwiftPackageReference "ToastUI" */,
+			);
 			productRefGroup = 7C73FE472DEFE193005437F4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -167,14 +172,30 @@
 			files = (
 				7C73FE512DEFE199005437F4 /* Preview Assets.xcassets in Resources */,
 				7C73FE4E2DEFE199005437F4 /* Assets.xcassets in Resources */,
-				CFE241522DF53512004D91FA /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		92D87D66D624FDB1F85EA7F7 /* [CP] Check Pods Manifest.lock */ = {
+		1E6C904038F0F124264CC4E1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FaceAISDK_iOS/Pods-FaceAISDK_iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FaceAISDK_iOS/Pods-FaceAISDK_iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FaceAISDK_iOS/Pods-FaceAISDK_iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B47F3F37DE7059954F57D4B6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -196,7 +217,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D46AAB3B59A51A4C14B9CB8F /* [CP] Copy Pods Resources */ = {
+		FDB441EFAAB5BD698B105468 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -213,23 +234,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FaceAISDK_iOS/Pods-FaceAISDK_iOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DFB4312803164A9B1E554BFC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FaceAISDK_iOS/Pods-FaceAISDK_iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FaceAISDK_iOS/Pods-FaceAISDK_iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FaceAISDK_iOS/Pods-FaceAISDK_iOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -237,9 +241,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF2E7E812E2E1FA500608756 /* VerifyFaceView.swift in Sources */,
+				CF2E7E822E2E1FA500608756 /* VerifyFaceModelCustom.swift in Sources */,
 				7C73FE652DEFEA6F005437F4 /* ImageDetailView.swift in Sources */,
 				7C73FE632DEFEA6F005437F4 /* FaceAINaviView.swift in Sources */,
-				7C73FE612DEFEA6F005437F4 /* VerifyFaceView.swift in Sources */,
 				7C73FE622DEFEA6F005437F4 /* FaceAISDK_iOSApp.swift in Sources */,
 				7C73FE642DEFEA6F005437F4 /* AddFaceView.swift in Sources */,
 			);
@@ -371,7 +376,7 @@
 		};
 		7C73FE552DEFE199005437F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7DF1A82A5EBABC164C97572F /* Pods-FaceAISDK_iOS.debug.xcconfig */;
+			baseConfigurationReference = 9B07C83023D0CC8A9EC7E5E3 /* Pods-FaceAISDK_iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -397,14 +402,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.faceaisdk.FaceAISDK-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		7C73FE562DEFE199005437F4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C259A2CEEE9096A1DEDAF78B /* Pods-FaceAISDK_iOS.release.xcconfig */;
+			baseConfigurationReference = A5ED0820CE7BE69BC3CF7BE9 /* Pods-FaceAISDK_iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -430,7 +435,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.faceaisdk.FaceAISDK-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -457,6 +462,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CF44AD212E2CFCC7001177C6 /* XCRemoteSwiftPackageReference "ToastUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/quanshousio/ToastUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CF44AD222E2CFCC7001177C6 /* ToastUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CF44AD212E2CFCC7001177C6 /* XCRemoteSwiftPackageReference "ToastUI" */;
+			productName = ToastUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7C73FE3E2DEFE193005437F4 /* Project object */;
 }

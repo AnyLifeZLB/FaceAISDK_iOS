@@ -34,7 +34,7 @@ struct VerifyFaceView: View {
                 .frame(minHeight: 30)
                 .foregroundColor(.black)
             
-            FaceCameraPreview(session: viewModel.captureSession,cameraSize: cameraSize)
+            FaceAICameraView(session: viewModel.captureSession,cameraSize: cameraSize)
                 .frame(
                     width: min(UIScreen.main.bounds.width,cameraSize),
                     height: min(UIScreen.main.bounds.width,cameraSize))
@@ -53,6 +53,7 @@ struct VerifyFaceView: View {
         
         .onChange(of: viewModel.faceVerifyResult.code) { newValue in
             showToast = true
+            print("ViewModel 返回 ： \(viewModel.faceVerifyResult)")
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                 showToast = false
                 onDismiss(viewModel.faceVerifyResult)  // 传值给父视图
@@ -61,7 +62,7 @@ struct VerifyFaceView: View {
         }
         
         .toast(isPresented: $showToast) {
-            ToastView(" \(viewModel.faceVerifyResult.tips)")
+            ToastView("\(viewModel.faceVerifyResult.tips)").toastViewStyle(.success)
         }
         
         .onDisappear{

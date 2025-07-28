@@ -1,23 +1,98 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 6.1 effective-5.10 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)
-// swift-module-flags: -target arm64-apple-ios16.6 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name FaceAISDK_Core
+// swift-module-flags: -target arm64-apple-ios16.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name FaceAISDK_Core
 // swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1
 import AVFoundation
 import Combine
 import CoreVideo
 import Foundation
 import MLImage
-import MLKitCommon
 import MLKitFaceDetection
 import MLKitVision
 import Swift
 import SwiftUI
+import TensorFlowLite
 import UIKit
 import Vision
 import VisionKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
+@_Concurrency.MainActor @preconcurrency public struct FaceAICameraView : SwiftUI.UIViewControllerRepresentable {
+  @_Concurrency.MainActor @preconcurrency public init(session: AVFoundation.AVCaptureSession, cameraSize: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor @preconcurrency public func makeUIViewController(context: FaceAISDK_Core.FaceAICameraView.Context) -> UIKit.UIViewController
+  @_Concurrency.MainActor @preconcurrency public func updateUIViewController(_ uiViewController: UIKit.UIViewController, context: FaceAISDK_Core.FaceAICameraView.Context)
+  public typealias Body = Swift.Never
+  public typealias Coordinator = Swift.Void
+  public typealias UIViewControllerType = UIKit.UIViewController
+}
+@_hasMissingDesignatedInitializers public class FaceImageManger {
+  public static func saveBase64ToFile(base64String: Swift.String, filename: Swift.String) -> Swift.String?
+  public static func deleteFaceImage(faceID: Swift.String) -> Swift.Bool
+  public static func isFaceImageExist(faceID: Swift.String) -> Swift.Bool
+  @objc deinit
+}
+public struct FaceVerifyResult : Swift.Equatable {
+  public var code: Swift.Int
+  public var tips: Swift.String
+  public var similarity: Swift.Float
+  public static func == (a: FaceAISDK_Core.FaceVerifyResult, b: FaceAISDK_Core.FaceVerifyResult) -> Swift.Bool
+}
+@_hasMissingDesignatedInitializers final public class TFLiteManager {
+  public static func loadModelPathFromSubBundle(subBundleName: Swift.String, modelName: Swift.String) -> Swift.String?
+  public static func loadModelPath(name: Swift.String) -> Swift.String?
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers open class VerifyFaceModel : ObjectiveC.NSObject, Foundation.ObservableObject, AVFoundation.AVCaptureVideoDataOutputSampleBufferDelegate {
+  public static let defaultTips: Swift.String
+  @Combine.Published @_projectedValueProperty($verifyFaceTips) public var verifyFaceTips: Swift.String {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $verifyFaceTips: Combine.Published<Swift.String>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($verifyFaceTipsExtra) public var verifyFaceTipsExtra: Swift.String {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $verifyFaceTipsExtra: Combine.Published<Swift.String>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  @Combine.Published @_projectedValueProperty($faceVerifyResult) public var faceVerifyResult: FaceAISDK_Core.FaceVerifyResult {
+    get
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    set
+    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+    _modify
+  }
+  public var $faceVerifyResult: Combine.Published<FaceAISDK_Core.FaceVerifyResult>.Publisher {
+    get
+    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
+    set
+  }
+  final public let captureSession: AVFoundation.AVCaptureSession
+  open var interpreter: TensorFlowLite.Interpreter!
+  open var modelPath: Swift.String?
+  @objc override dynamic public init()
+  public func setInterpreter(faceInterpreter: TensorFlowLite.Interpreter)
+  public func stopFaceVerify()
+  open func setupTFModel3()
+  public func initFaceAISDK(faceIDParam: Swift.String, threshold: Swift.Float)
+  @objc public func captureOutput(_ output: AVFoundation.AVCaptureOutput, didOutput sampleBuffer: CoreMedia.CMSampleBuffer, from connection: AVFoundation.AVCaptureConnection)
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
 @objc @_inheritsConvenienceInitializers public class AddFaceModel : ObjectiveC.NSObject, Foundation.ObservableObject, AVFoundation.AVCaptureVideoDataOutputSampleBufferDelegate {
   @Combine.Published @_projectedValueProperty($canAddFace) public var canAddFace: UIKit.UIImage {
     get
@@ -69,72 +144,12 @@ import _SwiftConcurrencyShims
   }
   final public let captureSession: AVFoundation.AVCaptureSession
   public func stopAddFace()
+  @objc override dynamic public init()
   public func initAddFace()
   @objc public func captureOutput(_ output: AVFoundation.AVCaptureOutput, didOutput sampleBuffer: CoreMedia.CMSampleBuffer, from connection: AVFoundation.AVCaptureConnection)
   public func reInit()
-  @objc override dynamic public init()
   public func confirmSaveFaceAir(fileName: Swift.String) -> Swift.String?
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers public class VerifyFaceModel : ObjectiveC.NSObject, Foundation.ObservableObject, AVFoundation.AVCaptureVideoDataOutputSampleBufferDelegate {
-  public static let defaultTips: Swift.String
-  @Combine.Published @_projectedValueProperty($verifyFaceTips) public var verifyFaceTips: Swift.String {
-    get
-    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
-    set
-    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
-    _modify
-  }
-  public var $verifyFaceTips: Combine.Published<Swift.String>.Publisher {
-    get
-    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
-    set
-  }
-  @Combine.Published @_projectedValueProperty($verifyFaceTipsExtra) public var verifyFaceTipsExtra: Swift.String {
-    get
-    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
-    set
-    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
-    _modify
-  }
-  public var $verifyFaceTipsExtra: Combine.Published<Swift.String>.Publisher {
-    get
-    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
-    set
-  }
-  @Combine.Published @_projectedValueProperty($faceVerifyResult) public var faceVerifyResult: FaceAISDK_Core.FaceVerifyResult {
-    get
-    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
-    set
-    @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
-    _modify
-  }
-  public var $faceVerifyResult: Combine.Published<FaceAISDK_Core.FaceVerifyResult>.Publisher {
-    get
-    @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
-    set
-  }
-  final public let captureSession: AVFoundation.AVCaptureSession
-  public func stopFaceVerify()
-  public func initFaceAISDK(faceIDParam: Swift.String, threshold: Swift.Float)
-  @objc public func captureOutput(_ output: AVFoundation.AVCaptureOutput, didOutput sampleBuffer: CoreMedia.CMSampleBuffer, from connection: AVFoundation.AVCaptureConnection)
-  @objc override dynamic public init()
-  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
-  @objc deinit
-}
-public struct FaceVerifyResult : Swift.Equatable {
-  public var code: Swift.Int
-  public var tips: Swift.String
-  public var similarity: Swift.Float
-  public static func == (a: FaceAISDK_Core.FaceVerifyResult, b: FaceAISDK_Core.FaceVerifyResult) -> Swift.Bool
-}
-@_Concurrency.MainActor @preconcurrency public struct FaceCameraPreview : SwiftUI.UIViewControllerRepresentable {
-  @_Concurrency.MainActor @preconcurrency public init(session: AVFoundation.AVCaptureSession, cameraSize: CoreFoundation.CGFloat)
-  @_Concurrency.MainActor @preconcurrency public func makeUIViewController(context: FaceAISDK_Core.FaceCameraPreview.Context) -> UIKit.UIViewController
-  @_Concurrency.MainActor @preconcurrency public func updateUIViewController(_ uiViewController: UIKit.UIViewController, context: FaceAISDK_Core.FaceCameraPreview.Context)
-  public typealias Body = Swift.Never
-  public typealias Coordinator = Swift.Void
-  public typealias UIViewControllerType = UIKit.UIViewController
-}
-extension FaceAISDK_Core.FaceCameraPreview : Swift.Sendable {}
+extension FaceAISDK_Core.FaceAICameraView : Swift.Sendable {}
