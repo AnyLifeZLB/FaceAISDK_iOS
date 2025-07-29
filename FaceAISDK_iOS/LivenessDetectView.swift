@@ -5,10 +5,10 @@ import ToastUI
 
 
 /**
- * 人脸识别，摄像头采集画面需要真机调试
+ * 动作活体检测，（iOS 目前仅支持动作活体，静默 炫彩等排期）
  * UI 样式仅供参考，根据你的业务可自行调整
  */
-struct VerifyFaceView: View {
+struct LivenessDetectView: View {
     //确保ViewModel的生命周期与视图一致，使用@StateObject持有ViewModel，视图被销毁时会一起释放
     @StateObject private var viewModel: VerifyFaceModel = VerifyFaceModel()
     @State private var showToast = false
@@ -16,9 +16,7 @@ struct VerifyFaceView: View {
     
     //录入保存的FaceID 值。一般是你的业务体系中个人的唯一编码，比如账号 身份证
     let faceID: String
-    //人脸相似度阈值，范围0.8到0.95.
-    //设置的相似度阈值越高，对人脸角度，环境光线和摄像头宽动态要求越高
-    let threshold:Float
+ 
     let onDismiss: (FaceVerifyResult) -> Void
     
     var body: some View {
@@ -45,10 +43,9 @@ struct VerifyFaceView: View {
         }
         
         .onAppear {
-            //初始化人脸引擎,设置人脸识别的底片和比对相似度阈值（0.8到0.95）
-            //设置的相似度阈值越高，对人脸角度，环境光线和摄像头宽动态要求越高
-            //动作活体目前是随机的两个步骤，当前不支持设置，6月底会开发更多设置
-            viewModel.initFaceAISDK(faceIDParam: faceID,threshold: threshold)
+            //初始化人脸引擎
+            //是否仅仅需要动作活体检测，动作活体目前是随机的两个步骤
+            viewModel.initFaceAISDK(faceIDParam: faceID,onlyLiveness: true)
         }
         
         .onChange(of: viewModel.faceVerifyResult.code) { newValue in
@@ -62,7 +59,7 @@ struct VerifyFaceView: View {
         }
         
         .toast(isPresented: $showToast) {
-            ToastView("\(viewModel.faceVerifyResult.tips)   \(viewModel.faceVerifyResult.similarity)").toastViewStyle(.success)
+            ToastView("\(viewModel.faceVerifyResult.tips)").toastViewStyle(.success)
         }
         
         .onDisappear{

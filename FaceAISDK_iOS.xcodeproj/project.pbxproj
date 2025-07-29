@@ -17,6 +17,7 @@
 		CF2E7E812E2E1FA500608756 /* VerifyFaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2E7E802E2E1FA500608756 /* VerifyFaceView.swift */; };
 		CF2E7E822E2E1FA500608756 /* VerifyFaceModelCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2E7E7F2E2E1FA500608756 /* VerifyFaceModelCustom.swift */; };
 		CF44AD232E2CFCC7001177C6 /* ToastUI in Frameworks */ = {isa = PBXBuildFile; productRef = CF44AD222E2CFCC7001177C6 /* ToastUI */; };
+		CF9ABDE72E389864006642AF /* LivenessDetectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9ABDE62E389864006642AF /* LivenessDetectView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		A5ED0820CE7BE69BC3CF7BE9 /* Pods-FaceAISDK_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceAISDK_iOS.release.xcconfig"; path = "Target Support Files/Pods-FaceAISDK_iOS/Pods-FaceAISDK_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		CF2E7E7F2E2E1FA500608756 /* VerifyFaceModelCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyFaceModelCustom.swift; sourceTree = "<group>"; };
 		CF2E7E802E2E1FA500608756 /* VerifyFaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyFaceView.swift; sourceTree = "<group>"; };
+		CF9ABDE62E389864006642AF /* LivenessDetectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivenessDetectView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				7C73FE5E2DEFEA6F005437F4 /* AddFaceView.swift */,
 				7C73FE5D2DEFEA6F005437F4 /* FaceAINaviView.swift */,
 				7C73FE5C2DEFEA6F005437F4 /* FaceAISDK_iOSApp.swift */,
+				CF9ABDE62E389864006642AF /* LivenessDetectView.swift */,
 				7C73FE5F2DEFEA6F005437F4 /* ImageDetailView.swift */,
 				CF2E7E7F2E2E1FA500608756 /* VerifyFaceModelCustom.swift */,
 				CF2E7E802E2E1FA500608756 /* VerifyFaceView.swift */,
@@ -186,9 +189,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-FaceAISDK_iOS/Pods-FaceAISDK_iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-FaceAISDK_iOS/Pods-FaceAISDK_iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -225,9 +232,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-FaceAISDK_iOS/Pods-FaceAISDK_iOS-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-FaceAISDK_iOS/Pods-FaceAISDK_iOS-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -243,6 +254,7 @@
 			files = (
 				CF2E7E812E2E1FA500608756 /* VerifyFaceView.swift in Sources */,
 				CF2E7E822E2E1FA500608756 /* VerifyFaceModelCustom.swift in Sources */,
+				CF9ABDE72E389864006642AF /* LivenessDetectView.swift in Sources */,
 				7C73FE652DEFEA6F005437F4 /* ImageDetailView.swift in Sources */,
 				7C73FE632DEFEA6F005437F4 /* FaceAINaviView.swift in Sources */,
 				7C73FE622DEFEA6F005437F4 /* FaceAISDK_iOSApp.swift in Sources */,

@@ -6,7 +6,7 @@ target 'FaceAISDK_iOS' do
   use_frameworks!
 
   # 1.  pod update FaceAISDK_Core 安装更新FaceAISDK依赖,请指定版本。
-  pod 'FaceAISDK_Core', '1.0.0.line'
+  pod 'FaceAISDK_Core', '1.0.0.alpha'
 #  pod 'FaceAISDK_Core', :path => 'FaceAISDK_Core/FaceAISDK_Core.podspec' # 替换为实际路径
 
 
