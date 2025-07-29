@@ -20,22 +20,23 @@ struct FaceAINaviView: View {
         NavigationStack(path: $navigationPath) {
             VStack(spacing: 20) {
                 
-                Button("去添加人脸照片") {
+                Button("添加人脸照片") {
                     navigationPath.append(FaceAINaviDestination.AddFacePageView(faceID))
-                }.padding(.top,66)
+                }.padding(.top,55)
                 
-                Text("保存路径：\(addFaceResult ?? " 暂无")")
-                                    .font(.system(size: 10).bold())
-                                    .padding(.horizontal,15)
-                
-                Button("查看我的人脸底片") {
-                    navigationPath.append(FaceAINaviDestination.ImageDetailView(faceID))
-                }.padding(.top,33)
+                Text("变动路径：\(addFaceResult ?? " 暂无")")
+                                    .font(.system(size: 9).bold())
+                                    .padding(.horizontal,7)
                 
                 
-                Button("人脸识别，活体检测") {
+                Button("人脸识别活体检测") {
                     navigationPath.append(FaceAINaviDestination.VerifyFacePageView(faceID))
-                }.padding(.top,33)
+                }.padding(.top,20)
+                
+                
+                Button("动作活体检测") {
+                    navigationPath.append(FaceAINaviDestination.LivenessView(faceID))
+                }.padding(.top,25)
                 
                 
                 Button("判断本地人脸照片是否存在") {
@@ -43,12 +44,13 @@ struct FaceAINaviView: View {
                 }.padding(.top,33).font(.system(size: 11).bold())
 
                 
-                Button("删除本地人脸照片") {
-                    print("删除成功？：\(FaceImageManger.deleteFaceImage(faceID: faceID))")
+                Button("本地人脸照片转Base64") {
+                    print("转化结果？：\(FaceImageManger.imageFromDocumentsToBase64(fileName: faceID))")
+                    
                 }.padding(.top,11).font(.system(size: 11).bold())
 
-                Button("同步Base64 Jpg到本地") {
-                    print("同步Base64Jpg到本地：\(FaceImageManger.saveBase64ToFile(base64String: base64Data, filename: faceID))")
+                Button("同步Base64图片到本地") {
+                    print("同步Base64图片到本地：\(FaceImageManger.saveBase64ImageToLocal(base64String: base64Data, fileName: faceID))")
                 }.padding(.top,11).font(.system(size: 11).bold())
 
 
@@ -66,7 +68,7 @@ struct FaceAINaviView: View {
                 
             }
             
-            .navigationTitle("FaceAISDK Navi.🧭")
+            .navigationTitle("FaceAISDK 🧭")
             .navigationDestination(for: FaceAINaviDestination.self) { destination in
                 switch destination {
                     
@@ -88,12 +90,22 @@ struct FaceAINaviView: View {
                         // 1   人脸识别对比成功大于设置的threshold
                         // 2   人脸识别对比识别小于设置的threshold
                         
+                        print("verifyFaceView 返回 ：\(faceVerifyResult?.tips) \(faceVerifyResult?.code)")
+                        
                         if !navigationPath.isEmpty { // 检查路径是否为空
                             navigationPath.removeLast()
                         }
                     })
-                case .ImageDetailView(let param):
-                    ImageDetailView(faceID: param,onDismiss: { result in
+                case .LivenessView(let param):
+                    
+                    // faceVerifyResult.code
+                    // -2  人脸识别动作活体检测超过10秒
+                    // -1  多次切换人脸或检查失败
+                    // 0   默认值
+                    // 3   动作活体检测成功
+                    
+                    LivenessDetectView(faceID: param,onDismiss: { result in
+                        print("活体检测返回 ：\(result.tips) \(result.code)")
                         navigationPath.removeLast()
                     })
                     
@@ -109,7 +121,7 @@ struct FaceAINaviView: View {
 enum FaceAINaviDestination: Hashable {
     case AddFacePageView(String)
     case VerifyFacePageView(String)
-    case ImageDetailView(String)
+    case LivenessView(String)
 }
 
 #Preview {

@@ -18,11 +18,12 @@ import VisionKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
-@_hasMissingDesignatedInitializers public class FaceImageManger {
-  public static func saveBase64ToFile(base64String: Swift.String, filename: Swift.String) -> Swift.String?
-  public static func deleteFaceImage(faceID: Swift.String) -> Swift.Bool
-  public static func isFaceImageExist(faceID: Swift.String) -> Swift.Bool
-  @objc deinit
+public struct FaceVerifyResult : Swift.Equatable {
+  public var code: Swift.Int
+  public var tips: Swift.String
+  public var similarity: Swift.Float
+  public var faceImage: UIKit.UIImage?
+  public static func == (a: FaceAISDK_Core.FaceVerifyResult, b: FaceAISDK_Core.FaceVerifyResult) -> Swift.Bool
 }
 @_hasMissingDesignatedInitializers final public class TFLiteManager {
   public static func loadModelPathFromSubBundle(subBundleName: Swift.String, modelName: Swift.String) -> Swift.String?
@@ -73,16 +74,17 @@ import _SwiftConcurrencyShims
   public func setInterpreter(faceInterpreter: TensorFlowLite.Interpreter)
   public func stopFaceVerify()
   open func setupTFModel3()
-  public func initFaceAISDK(faceIDParam: Swift.String, threshold: Swift.Float)
+  public func initFaceAISDK(faceIDParam: Swift.String, threshold: Swift.Float = 0.85, onlyLiveness: Swift.Bool = false)
   @objc public func captureOutput(_ output: AVFoundation.AVCaptureOutput, didOutput sampleBuffer: CoreMedia.CMSampleBuffer, from connection: AVFoundation.AVCaptureConnection)
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
   @objc deinit
 }
-public struct FaceVerifyResult : Swift.Equatable {
-  public var code: Swift.Int
-  public var tips: Swift.String
-  public var similarity: Swift.Float
-  public static func == (a: FaceAISDK_Core.FaceVerifyResult, b: FaceAISDK_Core.FaceVerifyResult) -> Swift.Bool
+@_hasMissingDesignatedInitializers public class FaceImageManger {
+  public static func imageFromDocumentsToBase64(fileName: Swift.String, compressionQuality: CoreFoundation.CGFloat = 1.0) -> Swift.String?
+  public static func saveBase64ImageToLocal(base64String: Swift.String, fileName: Swift.String = "image") -> Swift.String?
+  public static func deleteFaceImage(faceID: Swift.String) -> Swift.Bool
+  public static func isFaceImageExist(faceID: Swift.String) -> Swift.Bool
+  @objc deinit
 }
 @_Concurrency.MainActor @preconcurrency public struct FaceAICameraView : SwiftUI.UIViewControllerRepresentable {
   @_Concurrency.MainActor @preconcurrency public init(session: AVFoundation.AVCaptureSession, cameraSize: CoreFoundation.CGFloat)
