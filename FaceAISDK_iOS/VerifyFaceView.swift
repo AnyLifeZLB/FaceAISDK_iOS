@@ -62,7 +62,13 @@ struct VerifyFaceView: View {
         }
         
         .toast(isPresented: $showToast) {
-            ToastView("\(viewModel.faceVerifyResult.tips)   \(viewModel.faceVerifyResult.similarity)").toastViewStyle(.success)
+            let sim = String(format: "%.2f", viewModel.faceVerifyResult.similarity)
+            if(viewModel.faceVerifyResult.similarity>threshold){
+                ToastView("\(viewModel.faceVerifyResult.tips)  \(sim)").toastViewStyle(.success)
+            }else {
+                ToastView("\(viewModel.faceVerifyResult.tips)  \(sim)").toastViewStyle(.failure)
+            }
+
         }
         
         .onDisappear{
