@@ -45,9 +45,6 @@ Installation ToastUI https://github.com/quanshousio/ToastUI
   SDK中人脸录入和识别都需要指定一个唯一的FaceID Key来关联你的用户，可以使用注册的手机号，身份证等  
   动作活体检测可以指定动作活体的步骤个数为1还是2个；其中SDK 的UI实现是完整暴露给开发者自由修改  
   
-#### 怎么清除缓存？
-- 1. pod cache clean --all
-- 2. pod deintegrate 
 
 ## 其他说明 
   本SDK 需要摄像头实时获取预览数据，目前只支持真机调试。
@@ -56,7 +53,7 @@ Installation ToastUI https://github.com/quanshousio/ToastUI
   Email: FaceAISDK.Service@gmail.com   
 
 ## 其他平台？
-  uniApp接入正重构为UTS 插件，0730 等待UNI官方协调上线处理.   
+  uniApp接入正重构为UTS 插件，0815 等待UNI官方协调上线处理.   
   uniApp:  https://github.com/AnyLifeZLB/uniPlugin_FaceAI_UTS    
   Android：https://github.com/AnyLifeZLB/FaceVerificationSDK     
   
